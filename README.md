@@ -15,4 +15,4 @@ In this repo you will find learning matrials + Verilog codes for **Digital Syste
 
 ## Laboratory setup
 
-The lab is based on a simulation environment using [Xilinx’s Vivado Design Suite - student edition](https://www.xilinx.com/support/university/vivado.html), you will be designing with Verilog HDL and simulating your designs using the built-in simulator.
+The lab is based on a simulation environment using [Xilinx’s Vivado Design Suite - student edition](https://www.xilinx.com/support/university/vivado.html), you will be designing with Verilog HDL and simulating your designs using the built-in simulator (ISim).
