@@ -46,4 +46,6 @@ module Full_adder (S, C_out, A, B, C_in); // This module represents a full adder
 
 endmodule
 ```
-Now you know how to add comments to a verilog code, a single-line comment is added by using `//`  and multi-line comments are added between `/*` and `*/`
+Now you know how to add comments to a verilog code, a single-line comments are added by using `//`  and multi-line comments are added between `/*` and `*/`.
+
+It is useful to visualize the module as a black box as seen in the figure below:
