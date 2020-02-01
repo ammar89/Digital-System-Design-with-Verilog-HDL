@@ -16,10 +16,10 @@ module name_of_module ();
 
 endmodule
 ```
-Each module must interact with its surrondings with ports, it is ncessary to enter the ports between the brackets `()` next to the `module` keyword, for example let us make a module that has the name `Full_adder`, has inputs `A`, `B` and `C_in` and has outputs `S` and `C_out`.
+Each module must interact with its surrondings with ports, it is ncessary to enter the ports between the brackets `()` next to the `module` keyword, for example let us make a module that has the name `full_adder`, has inputs `A`, `B` and `C_in` and has outputs `S` and `C_out`.
 
 ```verilog
-module Full_adder (S, C_out, A, B, C_in);
+module full_adder (S, C_out, A, B, C_in);
   
   input A, B, C_in;
   output S, C_out;
@@ -40,7 +40,7 @@ Let us write that down on the module as a comment,
   Desinger's name: Ammar Kurd
   Date: 01/02/2020
   */
-module Full_adder (S, C_out, A, B, C_in); // This module represents a full adder.
+module full_adder (S, C_out, A, B, C_in); // This module represents a full adder.
   input A, B, C_in;
   output S, C_out;
 
