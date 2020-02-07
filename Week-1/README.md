@@ -111,5 +111,5 @@ Now that you have a basic idea about Verilog let us take a quick tour in Xilinx 
 
 **Run Vivado** by clicking on its icon on the desktop
 
-![Vivado icon](/images/vivado_icon)
+![Vivado icon](/images/vivado_icon.jpg)
 
