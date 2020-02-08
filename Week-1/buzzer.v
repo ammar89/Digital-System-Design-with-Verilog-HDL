@@ -22,6 +22,6 @@ module vat_buzzer
   or  or_1a (temp_bad_1, above_30_1, below_25_1);
   or  or_1b (wake_up_1, temp_bad_1, low_level_1);
 
-  mux2 select_mux (buzzer, select_vat_1, wake_up_0, wake_up_1);
+  mux2 select_mux (buzzer, wake_up_0, wake_up_1, select_vat_1);
 
 endmodule
