@@ -109,7 +109,23 @@ The `wire` keyword is what is known as a *net type* in verilog and it is used to
 
 Now that you have a basic idea about Verilog let us take a quick tour in Xilinx Vivado the tool that you will be using to verify and simulate your logic designs.
 
-**Run Vivado** by clicking on its icon on the desktop
+**Run Vivado** by clicking on its icon on the desktop.
 
 ![Vivado icon](/images/vivado_icon.jpg)
 
+**Create a new project** as you can see in the figure below, the main window of Vivado contains an option for creating a new project.
+
+![Vivado's main window](/images/Vivado_main.JPG)
+
+This will open up a wizard to help you create a new project, the first step is to enter the project **name** and **location**, as you can see on the figure below.
+
+![New project wizard](/images/project_wizard_1.JPG)
+
+**Select RTL project**, RTL stands for register transfer level which is as defined in Wikipedia
+>is a design abstraction which models a synchronous digital circuit in terms of the flow of digital signals (data) between hardware registers, and the logical operations performed on those signals.
+
+![RTL project](/images/project_wizard_2.JPG)
+
+The next step is to **create design sources**, in our example we have a single module, so create `full_adder` and make sure Verilog is selected as the design language.
+
+![Create sources](/images/project_wizard_3.JPG)
