@@ -9,16 +9,16 @@ Similar to programming languages, designing digital systems with Verilog is done
 
 The file/s are then processed by software to verify and/or synthesize (*more on this later*) the design.
 
-In Verilog a digital system is divided into entities called modules, the system can be composed of one or more modules depending on complexity.
+In Verilog a digital system is divided into entities called **modules**, the system can be composed of one or more modules depending on complexity.
 
-The module starts with a the keyword `module` and ends with the keyword `endmodule`, each module must have a name right next to the `module` keyword, as seen in the code block bellow: 
+The module starts with the keyword `module` and ends with the keyword `endmodule`, each module must have a name right next to the `module` keyword, as seen in the code block bellow: 
 
 ```verilog
 module name_of_module ();
 
 endmodule
 ```
-Each module must interact with its surrondings with ports, it is ncessary to enter the ports between the brackets `()` next to the `module` keyword, for example let us make a module that has the name `full_adder`, has inputs `A`, `B` and `C_in` and has outputs `S` and `C_out`.
+Each module must interact with its surrondings with **ports**, so it is ncessary to enter the ports between the brackets `()` next to the `module` keyword, for example let us make a module that has the name `full_adder`, has inputs `A`, `B` and `C_in` and has outputs `S` and `C_out`.
 
 ```verilog
 module full_adder (S, C_out, A, B, C_in);
@@ -33,7 +33,7 @@ endmodule
 
 Inputs are indicated with the `input` keyword and outputs with the `output` keyword.
 
-So far, we created a module that does not do any thing, it just has a name, input ports and output ports, but from its name you can tell that we want to build a [full adder](https://www.geeksforgeeks.org/full-adder-in-digital-logic/) which is a simple combinational circuit.
+So far, we created a module that does not do anything, it has a name, and input and output ports, but from its name you can tell that we want to build a [full adder](https://www.geeksforgeeks.org/full-adder-in-digital-logic/) which is a simple combinational circuit.
 
 Let us write that down on the module as a comment,
 
@@ -54,7 +54,7 @@ It is useful to visualize the module as a black box as seen in the figure below:
 
 ![full adder](/images/full_adder_2.png) 
 
-To describe the internals of the black box we will be using what is called *primitive modules* these primitives are basic logic gates that can be **instantiated** directly into the design, but, 
+To describe the internals of the black box we will be using what is called *primitive gates* these primitives are basic logic gates that can be **instantiated** directly into the design, but, 
 what is instantiation you ask? Well... instantiation is similar to the concept of calling a function in a programming language when you instantiate a module inside your design you are copying it into the design, for example, say you would like to instantiate `full_adder` into another module let us say `four_bit_adder` you can do that in this manner: 
 
 ```verilog 
@@ -101,9 +101,9 @@ module full_adder (S, C_out, A, B, C_in); // This module represents a full adder
 endmodule
 ```
 
-By observing the code you can notice a one-one equivalence between the code and diagram.
+By observing the code you can notice a one-to-one equivalence between the code and diagram.
 
-The `wire` keyword is what is known as a *net type* in verilog, it is used to model physical wires, the inputs and outputs are wires by deafult.
+The `wire` keyword is what is known as a *net type* in verilog and it is used to model physical wires, note that inputs and outputs are wires by deafult.
 
 ## Introduction to Vivado
 
