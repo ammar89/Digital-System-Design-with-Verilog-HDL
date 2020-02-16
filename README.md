@@ -16,3 +16,11 @@ In this repo you will find learning matrials + Verilog codes for **Digital Syste
 ## Laboratory setup
 
 The lab is based on a simulation environment using [Xilinx’s Vivado Design Suite - student edition](https://www.xilinx.com/support/university/vivado.html), you will be designing with Verilog HDL and simulating your designs using the built-in simulator (ISim).
+
+## Useful resources
+
+* [EDA Playground](https://www.edaplayground.com/).
+* [OpenCores projects](https://opencores.org/projects).
+* [Introdction to Verilog by Altera on YouTube](https://www.youtube.com/watch?v=PJGvZSlsLKs).
+* [Introduction to FPGA Design for Embedded Systems - course on Coursera](https://www.coursera.org/learn/intro-fpga-design-embedded-systems)
+* [Hardware Description Languages for FPGA Design - course on Coursera](https://www.coursera.org/learn/fpga-hardware-description-languages)
