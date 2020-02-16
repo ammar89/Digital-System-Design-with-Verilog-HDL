@@ -24,3 +24,4 @@ The lab is based on a simulation environment using [Xilinx’s Vivado Design Sui
 * [Introdction to Verilog by Altera on YouTube](https://www.youtube.com/watch?v=PJGvZSlsLKs).
 * [Introduction to FPGA Design for Embedded Systems - course on Coursera](https://www.coursera.org/learn/intro-fpga-design-embedded-systems)
 * [Hardware Description Languages for FPGA Design - course on Coursera](https://www.coursera.org/learn/fpga-hardware-description-languages)
+* [Verilog tutorials and other resources on ASIC World](http://www.asic-world.com/verilog/index.html)
