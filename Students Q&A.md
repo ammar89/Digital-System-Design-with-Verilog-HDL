@@ -55,7 +55,7 @@ To know more about the differnces check [here](https://www.ourpcb.com/fpga-vs-mi
 
 Now if you are not familiar with those operations or gate and their behavior, then it is time to review them, to map a statement into those logical operations you have to search for certain the conjunctions in that statement and what they imply, for example:
 
-- Either sensor S_1 or S_2 can turn the alarm on, *here **either** and **or** implies a logical **OR gate**.
-- If sensor A is on and either sensor B or C is on the alarm will go on, *here **if**, **and**, **either** and **or** implies an **OR gate** between C and B and an **AND gate** between A and **B or C**.
+- Either sensor S_1 or S_2 can turn the alarm on, *here **either** and **or** implies a logical **OR gate***.
+- If sensor A is on and either sensor B or C is on the alarm will go on, *here **if**, **and**, **either** and **or** implies an **OR gate** between C and B and an **AND gate** between A and **B or C***.
 
 This topic goes deeper mathematically, but you only need to get the big picture, so any revision on logic design such as [Computer Logic on Wikiversity](https://en.wikiversity.org/wiki/Computer_Logic) should be sufficient.
