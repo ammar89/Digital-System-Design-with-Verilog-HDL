@@ -11,14 +11,14 @@ The file/s are then processed by software to verify and/or synthesize (*more on 
 
 In Verilog a digital system is divided into entities called **modules**, the system can be composed of one or more modules depending on complexity.
 
-The module starts with the keyword `module` and ends with the keyword `endmodule`, each module must have a name right next to the `module` keyword, as seen in the code block bellow: 
+The module starts with the keyword `module` and ends with the keyword `endmodule`, each module must have a name right next to the `module` keyword, as seen in the code block below: 
 
 ```verilog
 module name_of_module ();
 
 endmodule
 ```
-Each module must interact with its surrondings with **ports**, so it is ncessary to enter the ports between the brackets `()` next to the `module` keyword, for example let us make a module that has the name `full_adder`, has inputs `A`, `B` and `C_in` and has outputs `S` and `C_out`.
+Each module must interact with its surroundings with **ports**, so it is necessary to enter the ports between the brackets `()` next to the `module` keyword, for example, let us make a module that has the name `full_adder`, has inputs `A`, `B` and `C_in` and has outputs `S` and `C_out`.
 
 ```verilog
 module full_adder (S, C_out, A, B, C_in);
@@ -33,7 +33,7 @@ endmodule
 
 Inputs are indicated with the `input` keyword and outputs with the `output` keyword.
 
-So far, we created a module that does not do anything, it has a name, and input and output ports, but from its name you can tell that we want to build a [full adder](https://www.geeksforgeeks.org/full-adder-in-digital-logic/) which is a simple combinational circuit.
+So far, we created a module that does not do anything, it has a name, and input and output ports, but from its name, you can tell that we want to build a [full adder](https://www.geeksforgeeks.org/full-adder-in-digital-logic/) which is a simple combinational circuit.
 
 Let us write that down on the module as a comment,
 
@@ -48,7 +48,7 @@ module full_adder (S, C_out, A, B, C_in); // This module represents a full adder
 
 endmodule
 ```
-Now you know how to add comments to a verilog code, a single-line comments are added by using `//`  and multi-line comments are added between `/*` and `*/`.
+Now you know how to add comments to a Verilog code, single-line comments are added by using `//`  and multi-line comments are added between `/*` and `*/`.
 
 It is useful to visualize the module as a black box as seen in the figure below:
 
@@ -74,13 +74,13 @@ full_adder fa3(S[3], C_out, A[3], B[3], carry2);
 
 endmodule 
 ``` 
-The previous module contains new structures, but don't worry we will discuss them in due time, now I just want you to pay attention to this line `full_adder fa0(S[0], carry0, A[0], B[0], C_in);` in here we made an instance of the module `full_adder` named `fa0` where we connected its inputs and outputs with inputs, outputs and wires of `full_adder`.
+The previous module contains new structures, but don't worry we will discuss them in due time, now I just want you to pay attention to this line `full_adder fa0(S[0], carry0, A[0], B[0], C_in);` in here we made an instance of the module `full_adder` named `fa0` where we connected its inputs and outputs with inputs, outputs, and wires of `full_adder`.
 
-Now, let us get back to `full_adder`, the logic of the full adder should be known to you from the **Logic Design** course, if you want a refresh your memory on full adders then read [this](https://www.geeksforgeeks.org/full-adder-in-digital-logic/), below is a diagram depecting the full adder logic.
+Now, let us get back to `full_adder`, the logic of the full adder should be known to you from the **Logic Design** course, if you want a refresh your memory on full adders then read [this](https://www.geeksforgeeks.org/full-adder-in-digital-logic/), below is a diagram depicting the full adder logic.
 
 ![Full adder logic](/images/full_adder.bmp)
 
-The verilog code for this logic is as follows,
+The Verilog code for this logic is as follows,
 
 ```verilog
 
@@ -103,7 +103,7 @@ endmodule
 
 By observing the code you can notice a one-to-one equivalence between the code and diagram.
 
-The `wire` keyword is what is known as a *net type* in verilog and it is used to model physical wires, note that inputs and outputs are wires by deafult.
+The `wire` keyword is what is known as a *net type* in Verilog and it is used to model physical wires, note that inputs and outputs are wires by default.
 
 ## Introduction to Vivado
 
@@ -126,6 +126,11 @@ This will open up a wizard to help you create a new project, the first step is t
 
 ![RTL project](/images/project_wizard_2.JPG)
 
-The next step is to **create design sources**, in our example we have a single module, so create `full_adder` and make sure Verilog is selected as the design language.
+The next step is to **create design sources**, in our example, we have a single module, so create `full_adder` and make sure Verilog is selected as the design language.
 
 ![Create sources](/images/project_wizard_3.JPG)
+
+You can skip the **Add Constraints** step for now because we are only interested in simulating and verifying the functionality of our systems, and this step is related to the implementation of the system in the FPGA.
+
+In our lab, we will be using  **XC7a35tcpg236-1** as the main device but you are free to choose another device as well.
+
