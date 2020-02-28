@@ -107,7 +107,7 @@ The `wire` keyword is what is known as a *net type* in Verilog and it is used to
 
 ## Introduction to Vivado
 
-Now that you have a basic idea about Verilog let us take a quick tour in Xilinx Vivado the tool that you will be using to verify and simulate your logic designs.
+Now that you have a basic idea about Verilog let us take a quick tour in Xilinx Vivado the tool that you will be using to verify, simulate and synthesize your logic designs.
 
 **Run Vivado** by clicking on its icon on the desktop.
 
@@ -195,3 +195,7 @@ To verify the functionality of the full adder run the simulation.
 Finally, you will get the timing diagram that describes the relationship between the inputs and outputs of your module, as seen in the figure below.
 
 ![Timing diagram](/images/Vivado_project8.JPG)
+
+Take your time to investigate the timing diagram and the function of the full adder.
+
+### Syenthesis (Technology mapping)
