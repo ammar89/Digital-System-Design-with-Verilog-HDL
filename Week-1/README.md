@@ -134,3 +134,64 @@ You can skip the **Add Constraints** step for now because we are only interested
 
 In our lab, we will be using  **XC7a35tcpg236-1** as the main device but you are free to choose another device as well.
 
+At the end of this process you will end up with a project that contains three folders as they appear in the **sources** window, the folders are **Design Sources**, **Constraints**, and **Simulation Sources** let us just ignore the **Constraints** folder for now and concentrate on the **Design Sources** folder and **Simulation Sources** folder.
+
+In the **Design Sources**, you will find the Verilog module we created earlier as seen in the figure below.
+
+![Desgin Sources](/images/Vivado_project1.JPG)
+
+You can now edit the design source by editing the text file, enter the Verilog module of the full adder as seen in the figure below.
+
+![Full adder design source in Vivado](/images/Vivado_project2.JPG)
+
+To simulate the design you need to add another Verilog source in the **Simulation Sources** which is usually called a test-bench, to do so, right-click on the **Sources** area and select **Add Sources...** 
+
+![Add sources](/images/Vivado_project3.JPG)
+
+Create a new file and name it test_bench.
+
+![Test-bench creation](/images/Vivado_project5.JPG)
+
+The test-bench will not have any inputs or outputs so go ahead and click okay.
+
+![The test-bench inputs and outputs](/images/project_wizard_6.JPG)
+
+The test-bench code is as shown below, it is okay if you don't understand it now, just know that this code will test your design by driving its inputs and monitoring its outputs, then reports the results to you in the form of a timing diagram.
+
+We will discuss the test-bench in more detail in lab2, for now, copy and paste the code below to the test_bench file you created.
+```verilog
+`timescale 1ns / 1ps
+module test_bench(
+
+    );
+    reg A, B, C_in;
+    wire S, C_out;
+    
+    full_adder fa1(S, C_out, A, B, C_in);
+    
+    initial
+        begin
+            A = 1'b0;
+            B = 1'b0;
+            C_in = 1'b0;
+            #10 A = 1'b1;
+            #10 B = 1'b1;
+                A = 1'b0;
+            #10 C_in = 1'b1;
+                B = 1'b0;
+            #10 B = 1'b1;
+            #10 A= 1'b1;
+            #10 $finish;
+        end
+
+endmodule
+```
+Just notice one thing now, the test-bench implements a certain simulation scenario between the **begin** and **end** keywords, try to follow this scenario, the **#10** means the passage of 10 units of time.
+
+To verify the functionality of the full adder run the simulation.
+
+![Run simulation](/images/Vivado_project7.JPG)
+
+Finally, you will get the timing diagram that describes the relationship between the inputs and outputs of your module, as seen in the figure below.
+
+![Timing diagram](/images/Vivado_project8.JPG)
